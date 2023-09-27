@@ -1,89 +1,547 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
-<!--deans comment-->
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/10.4.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/10.4.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/10.4.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+   <html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+      <!--=============== FAVICON ===============-->
+      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+      <!--=============== REMIXICONS ===============-->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.4.0/remixicon.css" crossorigin="">
+
+      <!--=============== CSS ===============-->
+      <link rel="stylesheet" href="assets/css/styles.css">
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <title>Mamnkeli's Portfolio</title>
+   </head>
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+   <body>
+      <!--==================== HEADER ====================-->
+      <header class="header" id="header">
+         <nav class="nav container">
+            <a href="#" class="nav__logo">
+            <span class="nav__logo-circle">M</span>
+            <span class="nav__logo-name">Mamnkeli Khaka</span>
+            </a>
+            
+            <div class="nav__menu" id="nav-menu">
+               <span class="nav__title">Menu</span>
+
+               <h3 class="nav__name">Mamnkeli</h3>
+
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">Home</a> 
+                  </li>
+                  <li class="nav__item">
+                     <a href="#about" class="nav__link ">About</a> 
+                  </li>
+                  <li class="nav__item">
+                     <a href="#projects" class="nav__link">Projects</a> 
+                  </li>
+                  <li class="nav__item">
+                     <a href="#achievements" class="nav__link">Achievements</a> 
+                  </li>
+                  <li class="nav__item">
+                     <a href="#contact" class="nav__link nav__link-button">Contact Me</a> 
+                  </li>
+               </ul> 
+
+               <!-- Close button -->
+               <div class="nav__close" id="nav-close">
+                  <i class="ri-close-line"></i>
+            </div>
+         </div>
+
+         <div class="nav__buttons">
+            <!-- Theme Button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+            <!-- Toggle button -->
+
+            <div class="nav__toggle" id="nav-toggle">
+               <i class="ri-menu-4-line"></i>
+            </div>
+         </div>
+
+             
+         </nav>
+      </header>
+
+
+      <!-- ? MAIN -->
+      <main class="main">
+
+         <!-- ? HOME -->
+         <section class="home section" id="home">
+            <div class="home__container container grid">
+               <h1 class="home__name">
+                  Mamnkeli  Khaka
+               </h1>
+               
+               <div class="home__perfil">
+                  <div class="home__social">
+                     <a href="https://github.com/Mamnkeli" target="_blank" class="home__social-link">
+                        <i class="ri-github-fill"></i>
+                     </a>
+                     <a href="https://www.linkedin.com/in/mamnkeli-khaka-b8bb7a1a5/" target="_blank" class="home__social-link">
+                        <i class="ri-linkedin-box-fill"></i>
+                     </a>
+                  </div>
+                  <div class="home__image">
+                     <img src="/assets/img/HomePic2.png" alt="image" class="home__img">
+                     <div class="home__shadow">
+                        <img src="/assets/img" alt="" class="home__arrow">
+                     </div>
+                  </div>
+                  
+               </div>
+               <div class="home__info">
+                  <p class="home__description">
+                     <b>Software Developer & Software Support Analyst</b>, with knowledge in Web Development and Design, I offer the best skills resulting in quality work.
+
+                  </p>
+
+                  <a href="/assets/docs/Mamnkeli Khaka CV.pdf" class="home__scroll">
+                      <div class="home__scroll-box">
+                        Download CV
+                      </div>
+                      <span class="home__scroll-text">Scroll Down </span>
+                  </a>
+               </div>
+            </div>
+         </section>
+
+
+
+         <!-- ? ABOUT -->
+         <section class="about section" id="about">
+           <div class="about__container container grid">
+            <h2 class="section__title-1">
+               <span>About Me.</span>
+            </h2>
+            <div class="about__perfil">
+                <div class="about__image">
+                  
+                  <img src="/assets/img/MainPic-removebg-preview.png" alt="image" class="about__img">
+                  
+                  <div class="about__shadow"></div>
+
+                  <div class="geometric-box">
+                     
+                  </div>
+                  <img src="/assets/img/arrow-dashed-svgrepo-com.svg" alt="" class="about__line">
+                  
+                  <div class="about__box"></div>
+                </div>
+            </div>
+            <div class="about__info">
+               <p class="about__description">
+                  I am an individual who is
+                  constantly trying to <b>develop
+                  himself</b> by learning a new skill
+                  or <b>improving</b> on existing
+                  ones. I invite <b>constructive
+                  criticism</b> from others and I
+                  take my professional
+                  development <b>seriously</b>. 
+                  <br>
+                  <br>
+                  I take 
+                  pride in my work and wherever I end up 
+                  working. I always focus on how I can <b>add
+                   value</b> to the team and organization. In addition
+                   to possessing <b>strong technical knowledge
+                   capabilities</b>, I also have <b>excellent communication
+                   skills</b>. 
+                   <br>
+                   <br>
+                   My hobbies are <b>gaming, music, sports and
+                   exercise</b>, cooking; although my baking needs working on
+                   I am not sure if I can count it as a serious 
+                   board game, but <b>I love playing 30 seconds</b>.  
+               </p>
+               <br>
+               <div class="about__buttons">
+                  
+                  <a class="button" onclick="" id="popupLink"><i class="ri-eye-line"></i></i>Education
+                  </a>
+                  <a class="button" onclick="" id="popupLink2"><i class="ri-eye-line"></i></i>Experience
+                  </a>
+                  <a class="button" onclick="" id="popupLink1"><i class="ri-eye-line"></i></i>Skills
+                  </a>
+                  <a class="button" onclick="" id="popupLink3"><i class="ri-eye-line"></i></i>Platforms
+                  </a>
+               </div>
+
+
+            </div>
+           </div> 
+
+           <div id="popup">
+            <!-- Content for the pop-up goes here -->
+            <h2 class="section__title-2">
+               <span class="progress-text"><b>My Education</b></span>
+            </h2>
+            <p><h2>NDip: Information Technology | Walter Sisulu University<br>
+            <span>2016-2019</span></h2>
+            <h3>Software Development |   
+            Web Development |
+            Application Development</h3></p>
+        
+            <button id="closeButton" onclick="closePopup()">Close</button>
+        </div>
+
+        <div id="popup2">
+         <!-- Content for the pop-up goes here -->
+            <h2 class="section__title-2">
+               <span class="progress-text"><b>My Experience</b></span>
+            </h2>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <h3>Junior Software Developer</h3>
+                    <p class="experience-date">January 2023 - Present</p>
+                    <p class="experience-description">
+                        Description of your responsibilities and achievements in Job Title 1.
+                    </p>
+                </div>
+                <div class="experience-item">
+                    <h3>L1 Software Support Analyst</h3>
+                    <p class="experience-date">July - September 2023</p>
+                    <p class="experience-description">
+                        Description of your responsibilities and achievements in Job Title 2.
+                    </p>
+                </div>
+                <!-- Add more experience items as needed -->
+            </div>
+            <br>
+        </p>
+        <button onclick="closePopup2()">Close</button>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    <div id="popup1">
+      <!-- Content for the pop-up goes here -->
+      <h2 class="section__title-2">
+         <span class="progress-text"><b>My Skills</b></span>
+      </h2>
+      <p>
+      <h5>Troubleshooting(Case handling, Escalation, Ticket handling)<br></h5>
+      <h5>Cloud Computing(AWS)<br></h5>
+      <h5>Cybersecurity<br></h5>
+      <h5>Data Structures and Algorithms<br></h5>
+      <h5>Networking(TCP/IP,LAN/WAN, DNS, Network Model)<br></h5>
+      <h5>Databases<br></h5>
+      <h5>Web Development<br></h5>
+      <h5>Version Control/Git<br></h5>
+      <h5>Application Development<br></h5>
+      
+      <br>
+      </p>
+      <button onclick="closePopup1()">Close</button>
+  </div>
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-    </script>
-  </body>
+  <div id="popup3">
+   <!-- Content for the pop-up goes here -->
+   <h2 class="section__title-2">
+      <span class="progress-text"><b>Platforms Used</b></span>
+   </h2>
+
+
+        <img class="certificate-image" src="/assets/img/icons8-figma-96.png" alt="Figma">
+        <img class="certificate-image" src="/assets/img/icons8-visual-studio-96.png" alt="visual studio">
+        <img class="certificate-image" src="/assets/img/icons8-apache-netbeans-96.png" alt="netbeans">
+        <img class="certificate-image" src="/assets/img/icons8-notepad++-96 (1).png" alt="notepad++">
+        <img class="certificate-image" src="/assets/img/icons8-padlet-100.png" alt="padlet">
+        <img class="certificate-image" src="/assets/img/icons8-netlify-a-cloud-computing-company-that-offers-hosting-and-serverless-backend-services-for-static-websites.-96.png" alt="netlify">
+        <img class="certificate-image" src="/assets/img/icons8-github-96.png" alt="github">
+        <img class="certificate-image" src="/assets/img/icons8-discord-96.png" alt="discord">
+        <img class="certificate-image" src="/assets/img/icons8-slack-96.png" alt="slack">
+        <img class="certificate-image" src="/assets/img/icons8-confluence-96.png" alt="confluence">
+        <img class="certificate-image" src="/assets/img/icons8-salesforce-96.png" alt="salesforce">
+        <img class="certificate-image" src="/assets/img/icons8-jira-96.png" alt="jira">
+
+    <!-- Add more certificate cards as needed -->
+
+<br>
+<button onclick="closePopup3()">Close</button>
+</div>
+
+          
+         </section>
+
+
+                  <!--? PROJECTS -->
+         <section class="projects section" id="projects">
+            <h2 class="section__title-1">
+               <span>Projects.</span>
+            </h2>
+            <div class="projects__container container grid">
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="/assets/img/Mzamomtsha.png" alt="image" class="projects__img">
+                     <a href="https://beautiful-profiterole-12e6a8.netlify.app/" target="_blank "class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i> 
+
+                     </a>
+                  </div>
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Website</h3>
+                     <h2 class="projects title">Mzamomtsha School Website</h2>
+                     <p class="projects__description">
+                        Allows the Users to Enrol, Explore, and Contact the School Admin. This code utilizes JavaScript, HTML, CSS & Bootstrap.
+                     </p>
+                  </div>
+                  <div class="projects__buttons">
+                     <a href="https://github.com/Mamnkeli/School-Website" target="_blank " title="Website" class="projects__link">
+                        <i class="ri-github-fill"></i>View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="/assets/img/Guessing game.png" alt="image" class="projects__img">
+                     <a href="https://rad-profiterole-0a1ebd.netlify.app/" target="_blank " title="Application" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i> 
+
+                     </a>
+                  </div>
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Game</h3>
+                     <h2 class="projects title">Word Guessing Game</h2>
+                     <p class="projects__description">
+                        Allows the Users to complete the words, displays the correct answers and counts the score. This code utilizes JavaScript, HTML, CSS.
+                     </p>
+                  </div>
+                  <div class="projects__buttons">
+                     <a href="" target="_blank " class="projects__link">
+                        <i class="ri-github-fill"></i>View
+                     </a>
+                  </div>
+               </article>
+
+               <article class="projects__card">
+                  <div class="projects__image">
+                     <img src="/assets/img/Portfolio.png" alt="image" class="projects__img">
+                     <a href="https://mamnkeliportfolio.netlify.app/" target="_blank " title="Portfolio" class="projects__button button">
+                        <i class="ri-arrow-right-up-line"></i> 
+
+                     </a>
+                  </div>
+                  <div class="projects__content">
+                     <h3 class="projects__subtitle">Website</h3>
+                     <h2 class="projects title">Personal Portfolio</h2>
+                     <p class="projects__description">
+                        Allows the Users to Explore, download my CV, view Projects and Contact Me. This code utilizes JavaScript, HTML, CSS & Bootstrap.
+                     </p>
+                  </div>
+                  <div class="projects__buttons">
+                     <a href="https://github.com/Mamnkeli/Personal_Portfolio" target="_blank " class="projects__link">
+                        <i class="ri-github-fill"></i>View
+                     </a>
+                  </div>
+               </article>
+
+            </div>
+         </section>
+         
+      
+
+
+         <!-- ? ACHIEVEMENTS -->
+         <section class="services section" id="achievements">
+            <h2 class="section__title-2">Achievements.</h2>
+
+            <div class="services__container container grid">
+               <article class="services__card">
+                  <div class="services__border"></div>
+                     <div class="services__content">
+                        <div class="services__icon">
+                           <div class="services__box"></div>
+                           <i class="ri-google-fill"></i>
+                        </div>
+                        <h2 class="services__title">Google IT Support</h2>
+                        <p class="services__description">
+                           Provide end-to-end customer support, ranging from identitifying problems to troubleshooting and debugging.
+                        </p>
+                        <br>
+                        <div class="projects__buttons">
+                           <a href="https://coursera.org/share/6b2131d70ccf035fdba76fb50824b256" target="_blank " class="projects__link">
+                              <i class="ri-eye-line"></i>View
+                           </a>
+                        </div>
+                     </div>
+
+               </article>
+
+               <article class="services__card">
+                  <div class="services__border"></div>
+                     <div class="services__content">
+                        <div class="services__icon">
+                           <div class="services__box"></div>
+                           <i class="ri-cloud-line"></i>
+                        </div>
+                        <h2 class="services__title">DevOps on AWS</h2>
+                        <p class="services__description">
+                           Implement DevOps culture and practices, Adapt and enforce Continuous Integration and Continuous Delivery best practices on AWS
+                        </p>
+                        <br>
+                        <div class="projects__buttons">
+                           <a href="https://coursera.org/share/61379bea2203abf26d0389bf320289b4" target="_blank " class="projects__link">
+                              <i class="ri-eye-line"></i>View
+                           </a>
+                        </div>
+                     </div>
+
+               </article>
+
+               <article class="services__card">
+                  <div class="services__border"></div>
+                     <div class="services__content">
+                        <div class="services__icon">
+                           <div class="services__box"></div>
+                           <i class="ri-lock-password-line"></i>
+                        </div>
+                        <h2 class="services__title">IBM Cybersecurity Analyst</h2>
+                        <p class="services__description">
+                           Developed knowledge of Cybersecurity Analyst tools including data protection; SIEM, and systems and network fundamentals.
+                        </p>
+                        <br>
+                        <div class="projects__buttons">
+                           <a href="https://coursera.org/share/ecd6e732885096c86e1a6155eedb610b" target="_blank " class="projects__link">
+                              <i class="ri-eye-line"></i>View
+                           </a>
+                        </div>
+                     </div>
+                  
+               </article>
+            </div>
+         </section>
+
+         
+
+         <!-- ? CONTACT -->
+         <section class="contact section" id="contact">
+            <div class="contact__container grid">
+               <div class="contact__data">
+                  <h2 class="section__title-2">
+                     <span>Contact Me.</span>
+                  </h2>
+
+                  <p class="contact__description-1">
+                     I will read all emails. Send me any 
+                     message you want and I'll get back to you.
+                  </p>
+                  
+                  <p class="contact__description-2">
+                     I need your <b>Name</b> and <b>Email Address</b>, but
+                     you won't receive anything other than your reply.
+                  </p>
+                  <br>
+                  <div class="geometric-box"></div>
+               </div>
+
+               <div class="contact__mail">
+                  <h2 class="contact__title">
+                     Send Me A Message
+                  </h2>
+
+                  <form action="http://httpbin.org/post" method="POST"  class="contact__form" id="contact-form" >
+                     <div class="contact__group">
+                        <div class="contact__box">
+                           <input type="text" name="user__name" class="contact__input" id="name" required placeholder="First Name">
+                           <label for="name" class="contact__label">First Name</label>
+                        </div>
+                        <div class="contact__box">
+                           <input type="email" name="user__email" class="contact__input" id="email" required placeholder="Email Address ">
+                           <label for="email" class="contact__label">Email Address</label>
+                        </div>
+                     </div>
+
+                     <div class="contact__box">
+                        <input type="text" name="user__subject" class="contact__input" id="subject" required placeholder="Subject">
+                        <label for="subject" class="contact__label">Subject</label>
+                     </div>
+                     <div class="contact__box contact__area">
+                        <textarea name="user__message" id="message" class="contact__input" required placeholder="Message"></textarea>
+                        <label for="message" class="contact__label">Message</label>
+                     </div>
+
+                     <div class="g-recaptcha" data-sitekey="6Ld-aTwoAAAAAFfOAnJYH0DCF3wShvEY8mfqLyD7"></div>
+
+                     <p class="contact__message" id="contact-message"></p>
+                     <button type="submit" class="contact__button button">
+                        <i class="ri-send-plane-line"></i>Send Message
+                     </button>
+                  </form>
+               </div>
+
+               <div class="contact__social">
+                     <img src="/assets/img/icons8-curved-arrow-downward-96.png" alt="" class="contact__social-arrow">
+                     <div class="contact__social-data">
+                        <div>
+                           <p class="contact__social-description-1">
+                              I do not send emails
+                           </p>
+                           <p class="contact__social-description-2">
+                              Write on my Social Networks
+                           </p>
+                        </div>
+                        <div class="contact__social-links">
+                           <a href="" target="_blank" class="contact__social-link">
+                              <i class="ri-instagram-line"></i>
+                           </a>
+                           <a href="https://www.linkedin.com/in/mamnkeli-khaka-b8bb7a1a5/" target="_blank" class="contact__social-link">
+                              <i class="ri-linkedin-box-line"></i>
+                           </a>
+                           
+                        </div>
+                     </div>
+               </div>
+
+            </div>
+         </section>
+      </main>
+
+      <!--==================== FOOTER ====================-->
+      <footer class="footer">
+         <div class="footer__container contaner-grid">
+            <ul class="footer__links">
+               <li>
+                  <a href="#home" class="footer__link">Home</a>
+               </li>
+               <li>
+                  <a href="#about" class="footer__link">About</a>
+               </li>
+               <li>
+                  <a href="#projects" class="footer__link">Projects</a>
+               </li>
+               <li>
+                  <a href="#achievements" class="footer__link">Achievements</a>
+               </li>
+            </ul>
+
+
+            <br>
+            <span class="footer__copy">
+               Copyright &copy; 2023 <NAME>Mamnkeli </NAME>
+            </span> 
+         </div>
+      </footer>
+
+
+      <!--========== SCROLL UP ==========-->
+      <a href="#" class="scrollup" id="scroll-up">
+         <i class="ri-arrow-up-s-line"></i>
+      </a>
+
+      <!--=============== SCROLLREVEAL ===============-->
+      <script src="/assets/js/scrollreveal.min.js"></script>
+      
+      <!--=============== EMAIL JS ===============-->
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+      <!--=============== MAIN JS ===============-->
+      <script src="assets/js/main.js"></script>
+   </body>
 </html>
