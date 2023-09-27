@@ -2,65 +2,60 @@
 My Portfolio
 https://my-portfolio-d6b50.web.app/
 
-# Mamnkeli's Portfolio
+# Mamnkeli's Portfolio Website
 
-Welcome to Mamnkeli's Portfolio! This HTML document represents the portfolio website of Mamnkeli Khaka, a Software Developer & Software Support Analyst. This portfolio showcases Mamnkeli's skills, achievements, projects, and provides a means to get in touch.
+Welcome to Mamnkeli's Portfolio Website! This repository contains the source code for Mamnkeli Khaka's personal portfolio website. This website showcases Mamnkeli's skills, projects, achievements, and provides a way to contact him.
+
+![Mamnkeli's Portfolio](/assets/img/HomePic2.png)
 
 ## Table of Contents
-1. [Introduction](#introduction)
-2. [Navigation](#navigation)
-3. [Sections](#sections)
-    - [Home](#home)
-    - [About](#about)
-    - [Projects](#projects)
-    - [Achievements](#achievements)
-    - [Contact](#contact)
-4. [Footer](#footer)
-5. [Scroll Up Button](#scroll-up-button)
-6. [Scripts and Libraries](#scripts-and-libraries)
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Introduction
-This HTML document represents Mamnkeli Khaka's personal portfolio website. It provides an overview of Mamnkeli's skills, experience, projects, and contact information. The website is designed to be visually appealing and informative.
+Mamnkeli Khaka is a Software Developer & Software Support Analyst with expertise in Web Development and Design. This portfolio website serves as a digital resume and showcases Mamnkeli's skills and projects. It also provides a way for visitors to get in touch with him.
 
-## Navigation
-- The navigation menu allows users to quickly jump to different sections of the portfolio website.
-- It includes links to Home, About, Projects, Achievements, and Contact sections.
-- Users can also toggle the menu on mobile devices using the "Menu" button.
+## Features
+- Home section with a brief introduction and a downloadable CV.
+- About section with information about Mamnkeli's background, skills, and hobbies.
+- Projects section showcasing some of Mamnkeli's notable projects with descriptions and links.
+- Achievements section highlighting Mamnkeli's certifications and achievements.
+- Contact section with a contact form and links to social networks.
+- Responsive design for a seamless experience on various devices.
+- Dark mode toggle button for better readability.
 
-## Sections
-### Home
-- The Home section contains a brief introduction to Mamnkeli Khaka.
-- It includes links to Mamnkeli's GitHub and LinkedIn profiles.
-- Users can download Mamnkeli's CV from this section.
+## Technologies Used
+- HTML
+- CSS
+- JavaScript
+- Bootstrap
+- [ScrollReveal](https://scrollrevealjs.org/) for scroll animations
+- [Email.js](https://www.emailjs.com/) for handling contact form submissions
+- [reCAPTCHA](https://developers.google.com/recaptcha) for spam prevention
+- Various icons from [RemixIcons](https://remixicon.com/)
 
-### About
-- The About section provides a detailed description of Mamnkeli's background, skills, and hobbies.
-- Users can click on buttons to view Mamnkeli's education, experience, skills, and platforms used.
-- Each button opens a popup with additional information.
+## Getting Started
+To run this website locally or make modifications, follow these steps:
+1. Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/your-username/your-portfolio.git
+   ```
+2. Open the `index.html` file in your preferred web browser to view the website locally.
 
-### Projects
-- The Projects section showcases some of Mamnkeli's notable projects.
-- Each project card includes an image, title, description, and a link to view the project on GitHub or an external site.
+## Usage
+Feel free to use this portfolio website as a template for your own portfolio or personal website. Customize the content, add your projects, and update the styling to make it your own. Don't forget to replace Mamnkeli's information with your own.
 
-### Achievements
-- The Achievements section highlights some of Mamnkeli's notable achievements and certifications.
-- Each achievement card includes an icon, title, description, and a link to view the achievement on an external site.
+## Contributing
+If you'd like to contribute to this project, please open an issue or submit a pull request with your changes. Any contributions are welcome!
 
-### Contact
-- The Contact section allows users to send Mamnkeli a message.
-- Users can enter their name, email address, subject, and message.
-- A reCAPTCHA verification is included for security.
-- Users can also connect with Mamnkeli on social media.
+## License
+This project is licensed under the [MIT License](LICENSE).
 
-## Footer
-- The footer includes links to different sections of the website (Home, About, Projects, Achievements).
-- It also displays the copyright information.
+---
 
-## Scroll Up Button
-- The "Scroll Up" button allows users to quickly scroll to the top of the page.
-
-## Scripts and Libraries
-- The website utilizes external libraries and scripts, including Remixicons, W3.CSS, ScrollReveal, and EmailJS.
-- These libraries enhance the functionality and appearance of the website.
-
-This portfolio website is designed to provide visitors with an overview of Mamnkeli Khaka's skills, experience, and projects. It offers a convenient way to get in touch and learn more about Mamnkeli's work.
+Thank you for visiting Mamnkeli's Portfolio Website! If you have any questions or suggestions, please feel free to [contact Mamnkeli](#contact).
